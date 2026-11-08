@@ -1,0 +1,629 @@
+/* ==================================
+   PETLAR — ESTILOS GERAIS
+================================== */
+
+:root {
+   --lavanda: #7657a7;
+   --verde-menta: #b8dfd3;
+   --creme: #fff8ef;
+   --pessego: #f6b88b;
+   --grafite: #303342;
+   --branco: #ffffff;
+}
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+html {
+   scroll-behavior: smooth;
+}
+
+body {
+   font-family: Arial, sans-serif;
+   background-color: var(--creme);
+   color: var(--grafite);
+   line-height: 1.6;
+}
+
+/* CABEÇALHO */
+
+header {
+   background-color: var(--branco);
+   padding: 20px 8%;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   gap: 20px;
+
+   /* Cabeçalho fixo durante a rolagem */
+   position: sticky;
+   top: 0;
+   z-index: 1000;
+}
+
+header>a {
+   color: var(--lavanda);
+   font-size: 1.7rem;
+   font-weight: bold;
+   text-decoration: none;
+
+   /* PATINHA DO CABEÇALHO */
+   .logo-header .fa-paw {
+      color: var(--lavanda);
+      font-size: 1.4rem;
+      margin-right: 8px;
+   }
+}
+
+/* Patinha decorativa da seção principal */
+
+.hero-texto h1 .fa-paw {
+   color: var(--pessego);
+   font-size: 0.75em;
+   margin-left: 8px;
+}
+
+nav {
+   display: flex;
+   gap: 25px;
+   flex-wrap: wrap;
+}
+
+nav a {
+   color: var(--grafite);
+   text-decoration: none;
+   font-weight: 600;
+}
+
+nav a:hover {
+   color: var(--lavanda);
+}
+
+/* SEÇÃO PRINCIPAL */
+
+main section {
+   padding: 70px 8%;
+}
+
+main section {
+   scroll-margin-top: 110px;
+}
+
+#inicio {
+   min-height: 420px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   gap: 40px;
+}
+
+.hero-texto {
+   flex: 1;
+}
+
+.hero-imagem {
+   flex: 1;
+   display: flex;
+   justify-content: center;
+}
+
+.hero-imagem img {
+   width: 100%;
+   max-width: 480px;
+   border-radius: 24px;
+   box-shadow: 0 8px 24px rgba(48, 51, 66, 0.12);
+   object-fit: cover;
+}
+
+#inicio h1 {
+   max-width: 650px;
+   font-size: clamp(2rem, 5vw, 3.5rem);
+   line-height: 1.2;
+   color: var(--lavanda);
+}
+
+#inicio p {
+   font-size: 1.2rem;
+}
+
+#inicio a {
+   display: inline-block;
+   background-color: var(--lavanda);
+   color: var(--branco);
+   text-decoration: none;
+   font-weight: bold;
+   padding: 14px 28px;
+   border-radius: 30px;
+   transition: background-color 0.3s;
+   margin-top: 20px;
+}
+
+#inicio a:hover {
+   background-color: var(--grafite);
+}
+
+/* OUTRAS SEÇÕES */
+
+#sobre {
+   background-color: var(--verde-menta);
+}
+
+#contato {
+   background-color: var(--branco);
+}
+
+#curiosidades {
+   background-color: var(--verde-menta);
+   text-align: center;
+}
+
+section h2 {
+   color: var(--lavanda);
+   font-size: 2rem;
+   margin-bottom: 20px;
+}
+
+
+/* ==================================
+   RODAPÉ — PETLAR
+================================== */
+
+.rodape {
+   background-color: var(--grafite);
+   color: var(--branco);
+}
+
+.rodape-conteudo {
+   display: flex;
+   justify-content: space-between;
+   align-items: flex-start;
+   gap: 40px;
+   padding: 45px 8%;
+}
+
+.rodape-marca {
+   max-width: 350px;
+}
+
+.rodape-logo {
+   display: inline-block;
+   color: var(--verde-menta);
+   font-size: 1.5rem;
+   font-weight: bold;
+   text-decoration: none;
+   margin-bottom: 12px;
+}
+
+.rodape-marca p {
+   margin-bottom: 6px;
+   color: #e2e0ea;
+}
+
+.rodape-social h2 {
+   color: var(--branco);
+   font-size: 1.1rem;
+   margin-bottom: 18px;
+}
+
+.redes-sociais {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 18px;
+}
+
+.redes-sociais a,
+.redes-sociais span {
+   color: var(--verde-menta);
+   font-weight: 600;
+   text-decoration: none;
+}
+
+.redes-sociais a:hover {
+   color: var(--pessego);
+}
+
+.rodape-inferior {
+   border-top: 1px solid #555766;
+   padding: 20px 8%;
+   text-align: center;
+}
+
+.rodape-inferior p {
+   margin: 5px 0;
+   font-size: 0.85rem;
+}
+
+.rodape-inferior strong {
+   color: var(--verde-menta);
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 600px) {
+   .rodape-conteudo {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 30px;
+      padding: 35px 6%;
+   }
+
+   .rodape-social {
+      text-align: center;
+   }
+
+   .redes-sociais {
+      justify-content: center;
+   }
+
+   .rodape-inferior {
+      padding: 20px 6%;
+   }
+}
+
+/* ==================================
+   PETLAR — CARDS DE ADOÇÃO
+================================== */
+
+#adocao {
+   text-align: center;
+}
+
+#adocao>p {
+   margin-bottom: 35px;
+}
+
+.pets-container {
+   display: grid;
+   grid-template-columns: repeat(3, minmax(0, 1fr));
+   gap: 25px;
+   max-width: 1200px;
+   margin: 0 auto;
+}
+
+.pet-card {
+   background-color: var(--branco);
+   border-radius: 18px;
+   overflow: hidden;
+   box-shadow: 0 5px 20px rgba(48, 51, 66, 0.1);
+   padding-bottom: 25px;
+   transition: transform 0.3s ease;
+}
+
+.pet-card:hover {
+   transform: translateY(-6px);
+}
+
+.pet-card img {
+   display: block;
+   width: 100%;
+   height: 250px;
+   object-fit: cover;
+}
+
+.pet-card h3 {
+   color: var(--lavanda);
+   font-size: 1.5rem;
+   margin: 18px 0 8px;
+}
+
+.pet-card p {
+   padding: 0 18px;
+   margin-bottom: 22px;
+}
+
+.pet-card a {
+   display: inline-block;
+   background-color: var(--lavanda);
+   color: var(--branco);
+   text-decoration: none;
+   font-weight: 600;
+   padding: 10px 22px;
+   border-radius: 25px;
+   transition: background-color 0.3s ease;
+}
+
+.pet-card a:hover {
+   background-color: var(--grafite);
+}
+
+/* RESPONSIVIDADE DOS CARDS */
+
+.curiosidade-card {
+   background-color: var(--branco);
+   max-width: 650px;
+   margin: 25px auto 0;
+   padding: 30px;
+   border-radius: 18px;
+   box-shadow: 0 5px 20px rgba(48, 51, 66, 0.1);
+}
+
+#btn-curiosidade {
+   background-color: var(--lavanda);
+   color: var(--branco);
+   border: none;
+   border-radius: 30px;
+   padding: 12px 25px;
+   font: inherit;
+   font-weight: bold;
+   margin-top: 20px;
+   cursor: pointer;
+}
+
+/* FORMULÁRIO DE CONTATO */
+
+#contato>p {
+   margin-bottom: 25px;
+}
+
+#form-contato {
+   max-width: 600px;
+   display: flex;
+   flex-direction: column;
+   gap: 18px;
+}
+
+/* Personalização dos placeholders do formulário */
+
+#form-contato input::placeholder,
+#form-contato textarea::placeholder {
+   color: var(--lavanda);
+   opacity: 1;
+}
+
+.campo {
+   display: flex;
+   flex-direction: column;
+   gap: 8px;
+}
+
+.campo label {
+   font-weight: 600;
+}
+
+.campo input,
+.campo textarea {
+   width: 100%;
+   padding: 14px;
+   border: 1px solid #ccc;
+   border-radius: 10px;
+   font: inherit;
+}
+
+.campo input:focus,
+.campo textarea:focus {
+   outline: 2px solid var(--lavanda);
+   outline-offset: 2px;
+}
+
+#form-contato button {
+   align-self: flex-start;
+   padding: 14px 28px;
+   background-color: var(--lavanda);
+   color: var(--branco);
+   border: none;
+   border-radius: 30px;
+   font: inherit;
+   font-weight: bold;
+   cursor: pointer;
+}
+
+#form-contato button:hover {
+   background-color: var(--grafite);
+}
+
+#resposta-formulario {
+   color: #28754d;
+   font-weight: 600;
+}
+
+/* ==================================
+   ACESSIBILIDADE — FOCO VISÍVEL
+================================== */
+
+a:focus-visible,
+button:focus-visible {
+   outline: 3px solid var(--lavanda);
+   outline-offset: 4px;
+}
+
+@media (max-width: 900px) {
+   .pets-container {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+   }
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 600px) {
+   header {
+      flex-direction: column;
+      text-align: center;
+   }
+
+   .hero-texto h1 {
+      margin-bottom: 18px;
+   }
+
+   .hero-texto p {
+      margin-bottom: 18px;
+   }
+
+   nav {
+      justify-content: center;
+      gap: 15px;
+   }
+
+   main section {
+      padding: 50px 6%;
+   }
+
+   #inicio {
+      min-height: 350px;
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+   }
+
+   .hero-texto {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+   }
+
+   .hero-imagem img {
+      max-width: 100%;
+   }
+
+   .pets-container {
+      grid-template-columns: 1fr;
+   }
+
+   .pet-card img {
+      height: 280px;
+   }
+}
+
+
+/* ÍCONES DAS REDES SOCIAIS */
+
+.icone-social {
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   width: 44px;
+   height: 44px;
+   border-radius: 50%;
+   background-color: #404254;
+   color: var(--verde-menta);
+   font-size: 1.25rem;
+   transition: transform 0.3s ease,
+      background-color 0.3s ease;
+}
+
+a.icone-social:hover {
+   background-color: var(--lavanda);
+   color: var(--branco);
+   transform: translateY(-4px);
+}
+
+/* PATINHA DO LOGOTIPO NO RODAPÉ */
+
+.patinha-rodape {
+   color: var(--pessego);
+   font-size: 1.4rem;
+   margin-right: 8px;
+}
+
+/* LINK DA DESENVOLVEDORA */
+
+.link-autora {
+   color: var(--verde-menta);
+   text-decoration: none;
+   font-weight: 700;
+   transition: color 0.3s ease;
+}
+
+.link-autora:hover {
+   color: var(--pessego);
+   text-decoration: underline;
+}
+
+.link-autora:focus-visible {
+   outline: 3px solid var(--verde-menta);
+   outline-offset: 4px;
+   border-radius: 3px;
+}
+
+
+/* ==================================
+   CONTATO — FORMULÁRIO E ILUSTRAÇÃO
+================================== */
+
+.contato-container {
+   display: grid;
+   grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+   align-items: center;
+   gap: 50px;
+   max-width: 1200px;
+   margin: 0 auto;
+}
+
+#form-contato {
+   width: 100%;
+   min-width: 0;
+}
+
+.contato-ilustracao {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   min-width: 0;
+}
+
+.contato-ilustracao img {
+   /* display: block;
+   width: 100%;
+   max-width: 420px;
+   height: auto; */
+   max-width: 480px;
+}
+
+/* TABLETS E CELULARES */
+
+@media (max-width: 768px) {
+   .contato-container {
+      grid-template-columns: 1fr;
+      gap: 30px;
+   }
+
+   .contato-ilustracao img {
+      max-width: 320px;
+   }
+}
+
+/* MENU — ÍCONES RESPONSIVOS */
+
+/* Desktop: exibir textos e esconder ícones */
+header nav a i {
+  display: none;
+}
+
+/* Tablet e celular: exibir ícones */
+@media (max-width: 768px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+    padding: 16px 5%;
+  }
+
+  header nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+    gap: 12px;
+  }
+
+  header nav a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 36px;
+    min-height: 44px;
+    font-size: 1.25rem;
+    color: var(--lavanda);
+  }
+
+  header nav a i {
+    display: inline-block;
+  }
+
+  header nav a span {
+    display: none;
+  }
+}

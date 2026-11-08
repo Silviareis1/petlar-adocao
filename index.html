@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="description" content="PetLar: um projeto de incentivo à adoção responsável de cães e gatos.">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+   <title>PetLar | Adoção Responsável</title>
+   <link rel="stylesheet" href="css/style.css">
+   <script src="js/script.js" defer></script>
+</head>
+
+<body>
+
+   <header>
+      <a href="#inicio" class="logo-header">
+         <i class="fa-solid fa-paw" aria-hidden="true"></i>
+         PetLar
+      </a>
+
+
+      <nav aria-label="Navegação principal">
+         <a href="#inicio" aria-label="Início">
+            <i class="fa-solid fa-house" aria-hidden="true"></i>
+            <span>Início</span>
+         </a>
+
+         <a href="#sobre" aria-label="Sobre">
+            <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+            <span>Sobre</span>
+         </a>
+
+
+         <a href="#adocao" aria-label="Adoção">
+            <i class="fa-solid fa-hand-holding-heart" aria-hidden="true"></i>
+            <span>Adoção</span>
+         </a>
+
+
+         <a href="#contato" aria-label="Contato">
+            <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+            <span>Contato</span>
+         </a>
+      </nav>
+
+   </header>
+
+   <main>
+      <section id="inicio">
+         <div class="hero-texto">
+            <h1>
+               Um novo lar, uma nova história! <i class="fa-solid fa-paw" aria-hidden="true"></i>
+            </h1>
+            <p>
+               Adotar é um gesto de amor que transforma vidas.
+            </p>
+            <a href="#adocao">Quero adotar</a>
+         </div>
+
+         <div class="hero-imagem">
+            <img src="assets/imagens/hero-pets.jpeg" alt="Cachorro e gato juntos representando adoção responsável">
+         </div>
+      </section>
+
+      <section id="sobre">
+         <h2>Sobre a PetLar</h2>
+         <p>
+            A PetLar é um projeto demonstrativo de incentivo
+            à adoção responsável de cães e gatos.
+         </p>
+      </section>
+
+
+      <section id="adocao">
+         <h2>Conheça nossos amiguinhos</h2>
+         <p>Encontre um companheiro para compartilhar amor e carinho!</p>
+
+         <div class="pets-container">
+
+            <article class="pet-card">
+               <img src="assets/imagens/mimi.jpeg" alt="Gatinha Mimi">
+               <h3>Mimi</h3>
+               <p>Uma gatinha carinhosa e cheia de energia.</p>
+               <a href="#contato">Quero conhecer</a>
+            </article>
+
+            <article class="pet-card">
+               <img src="assets/imagens/bento.jpeg" alt="Cachorrinho Bento">
+               <h3>Bento</h3>
+               <p>Um cãozinho brincalhão que adora companhia.</p>
+               <a href="#contato">Quero conhecer</a>
+            </article>
+
+            <article class="pet-card">
+               <img src="assets/imagens/luna.jpeg" alt="Gatinha Luna">
+               <h3>Luna</h3>
+               <p>Uma gatinha curiosa e muito companheira.</p>
+               <a href="#contato">Quero conhecer</a>
+            </article>
+
+         </div>
+      </section>
+
+      <section id="curiosidades">
+         <h2>Você sabia? 🐱</h2>
+         <p>Descubra uma curiosidade sobre os gatos!</p>
+
+         <div class="curiosidade-card">
+            <p id="fato-gato" aria-live="polite">
+               Clique no botão para descobrir uma curiosidade.
+            </p>
+
+            <p class="idioma-fato">Curiosidades em inglês.</p>
+
+            <button type="button" id="btn-curiosidade">
+               Nova curiosidade
+            </button>
+         </div>
+      </section>
+
+
+      <section id="contato">
+         <h2>Entre em contato</h2>
+         <p>Tem alguma dúvida? Envie uma mensagem!</p>
+
+         <div class="contato-container">
+
+            <form id="form-contato">
+               <div class="campo">
+                  <label for="nome">Nome</label>
+                  <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+               </div>
+
+               <div class="campo">
+                  <label for="email">E-mail</label>
+                  <input type="email" id="email" name="email" placeholder="Digite seu e-mail" required>
+               </div>
+
+               <div class="campo">
+                  <label for="mensagem">Mensagem</label>
+                  <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem"
+                     required></textarea>
+               </div>
+
+               <button type="submit">Enviar mensagem</button>
+
+               <p id="resposta-formulario" role="status" aria-live="polite"></p>
+            </form>
+
+            <div class="contato-ilustracao">
+               <img src="assets/imagens/contato.svg"
+                  alt="Ilustração de uma atendente representando a comunicação com a PetLar" loading="lazy">
+            </div>
+
+         </div>
+      </section>
+
+
+   </main>
+
+
+   <footer class="rodape">
+      <div class="rodape-conteudo">
+
+         <div class="rodape-marca">
+            <a href="#inicio" class="rodape-logo">
+               <i class="fa-solid fa-paw patinha-rodape" aria-hidden="true"></i>
+               PetLar
+            </a>
+
+            <p>Um novo lar, uma nova história.</p>
+            <p>Adoção responsável começa com amor. 💜</p>
+         </div>
+
+         <div class="redes-sociais">
+            <span class="icone-social" title="Facebook ilustrativo" aria-label="Facebook ilustrativo">
+               <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+            </span>
+
+            <span class="icone-social" title="Instagram ilustrativo" aria-label="Instagram ilustrativo">
+               <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+            </span>
+
+            <a class="icone-social" href="https://github.com/Silviareis1/petlar-adocao" target="_blank"
+               rel="noopener noreferrer" aria-label="Ver o projeto no GitHub">
+               <i class="fa-brands fa-github" aria-hidden="true"></i>
+            </a>
+         </div>
+      </div>
+
+      <div class="rodape-inferior">
+         <p>
+            &copy; 2026 PetLar | Projeto educacional desenvolvido durante
+            a Formação Desenvolvedor Full Stack Júnior da +praTI.
+         </p>
+
+         <p>
+            Desenvolvido por
+            <strong>
+               <a href="https://github.com/Silviareis1" target="_blank" rel="noopener noreferrer" class="link-autora">
+                  Silvia Reis
+               </a>
+            </strong> 💜
+         </p>
+      </div>
+   </footer>
+
+
+</body>
+
+</html>
