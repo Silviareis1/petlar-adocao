@@ -92,6 +92,50 @@ header nav a i {
    display: none;
 }
 
+
+/* ===== INDICADOR DO LINK ATIVO ===== */
+
+header nav a {
+   position: relative;
+}
+
+/* Linha na borda inferior do cabeçalho */
+header nav a::after {
+   content: "";
+   position: absolute;
+   bottom: -20px;
+   left: 0;
+   width: 100%;
+   height: 3px;
+   background-color: var(--lavanda);
+   border-radius: 3px 3px 0 0;
+
+   
+
+   transform: scaleX(0);
+   transform-origin: center;
+   transition: transform 0.25s ease;
+}
+
+/* Exibe a linha no link ativo */
+header nav a.ativo::after {
+   transform: scaleX(1);
+}
+
+/* Destaca também o texto e o ícone */
+header nav a.ativo {
+   color: var(--lavanda);
+}
+
+/* Ajuste para o cabeçalho mobile */
+@media (max-width: 768px) {
+   header nav a::after {
+      bottom: -16px;
+     
+   }
+}
+
+
 /* ==================================
    HERO / INÍCIO
 ================================== */
@@ -363,6 +407,166 @@ header nav a i {
 .pet-card a:hover {
    background-color: var(--grafite);
 }
+
+
+/* ===== PETLAR 2.0: CARD GIRATÓRIO ===== */
+
+.pet-flip {
+   height: 470px;
+   perspective: 1200px;
+   min-width: 0;
+}
+
+.pet-flip-inner {
+   position: relative;
+   width: 100%;
+   height: 100%;
+   transition: transform 0.7s ease;
+   transform-style: preserve-3d;
+}
+
+/* Estado que será controlado pelo JavaScript */
+.pet-flip.virado .pet-flip-inner {
+   transform: rotateY(180deg);
+}
+
+/* As duas faces ocupam o mesmo espaço */
+.pet-flip .pet-frente,
+.pet-flip .pet-verso {
+   position: absolute;
+   inset: 0;
+   width: 100%;
+   height: 100%;
+   backface-visibility: hidden;
+   -webkit-backface-visibility: hidden;
+   border-radius: 18px;
+   overflow: hidden;
+}
+
+/* Frente */
+.pet-flip .pet-frente {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   padding-bottom: 25px;
+}
+
+.pet-flip .pet-frente:hover {
+   transform: none;
+}
+
+.pet-flip .pet-frente p {
+   flex: 1;
+}
+
+.btn-virar,
+.btn-adotar {
+   display: inline-block;
+   background: var(--lavanda);
+   color: var(--branco);
+   border: none;
+   border-radius: 25px;
+   padding: 10px 22px;
+   font: inherit;
+   font-weight: 600;
+   cursor: pointer;
+   text-decoration: none;
+}
+
+/* Verso */
+.pet-verso {
+   transform: rotateY(180deg);
+   background-color: var(--creme);
+   background-image:
+      linear-gradient(
+      rgba(255, 248, 239, 0.25),
+         rgba(255, 248, 239, 0.25)
+      ),
+      url("../assets/imagens/fundo-patinhas.png");
+   background-size: cover;
+   background-position: center;
+
+   padding: 20px;
+   text-align: center;
+   box-shadow: 0 5px 20px rgba(255, 248, 239, 0.83);
+   overflow-y: auto !important;
+}
+
+.pet-verso h3 {
+   color: var(--lavanda);
+   font-size: 1.5rem;
+   margin: 12px 0 4px;
+}
+
+.pet-subtitulo {
+   font-size: 0.9rem;
+   margin-bottom: 16px;
+}
+
+.btn-voltar-card {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: 34px;
+   height: 34px;
+   border: none;
+   border-radius: 50%;
+   background: var(--lavanda);
+   color: var(--branco);
+   cursor: pointer;
+}
+
+.pet-detalhes {
+   text-align: left;
+   background: rgba(255, 255, 255, 0.82);
+   border-radius: 14px;
+   padding: 12px 14px;
+}
+
+.pet-detalhes p {
+   font-size: 0.85rem;
+   margin: 5px 0;
+   padding: 0;
+}
+
+.pet-historia {
+   margin: 16px 0;
+}
+
+.pet-historia h4 {
+   color: var(--lavanda);
+   margin-bottom: 8px;
+}
+
+.pet-historia p {
+   font-size: 0.85rem;
+   line-height: 1.5;
+   padding: 0;
+}
+
+.pet-flip button:focus-visible,
+.pet-flip a:focus-visible {
+   outline: 3px solid var(--grafite);
+   outline-offset: 3px;
+}
+
+/* Acessibilidade: reduzir movimento */
+@media (prefers-reduced-motion: reduce) {
+   .pet-flip-inner {
+      transition: none;
+   }
+}
+
+@media (max-width: 768px) {
+   .pet-flip {
+      height: 470px;
+   }
+
+   .pet-verso {
+      padding: 16px;
+   }
+}
+
 
 /* ==================================
    CURIOSIDADES
@@ -749,6 +953,32 @@ a.icone-social:hover {
       width: 44px;
       height: 44px;
    }
+}
+
+/* ===== CAMPO ASSUNTO ===== */
+
+#form-contato select {
+   width: 100%;
+   padding: 14px;
+   border: 1px solid #ddd;
+   border-radius: 10px;
+   background-color: var(--branco);
+   color: var(--grafite);
+   font: inherit;
+   cursor: pointer;
+}
+
+#form-contato select:focus {
+   outline: 2px solid var(--lavanda);
+   outline-offset: 2px;
+}
+
+#form-contato select:invalid {
+   color: var(--lavanda);
+}
+
+#form-contato select option {
+   color: var(--grafite);
 }
 
 @media (max-width: 600px) {
