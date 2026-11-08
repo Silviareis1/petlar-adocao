@@ -5,6 +5,8 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <meta name="description" content="PetLar: um projeto de incentivo à adoção responsável de cães e gatos.">
+   <meta name="keywords" content="PetLar, adoção responsável, cães, gatos, animais de estimação, resgate animal">
+   <meta name="author" content="Silvia Reis">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
    <title>PetLar | Adoção Responsável</title>
    <link rel="stylesheet" href="css/style.css">
@@ -63,13 +65,92 @@
          </div>
       </section>
 
-      <section id="sobre">
-         <h2>Sobre a PetLar</h2>
-         <p>
-            A PetLar é um projeto demonstrativo de incentivo
-            à adoção responsável de cães e gatos.
-         </p>
+
+      <section id="sobre" class="sobre">
+         <div class="sobre-container">
+
+            <div class="sobre-cabecalho">
+               <span class="sobre-etiqueta">Nossa história 🐾</span>
+               <h2>Sobre a PetLar</h2>
+               <p class="sobre-introducao">
+                  Toda vida merece uma segunda chance.
+               </p>
+            </div>
+
+            <!-- Bloco 1: Nossa história -->
+            <div class="sobre-historia">
+               <div class="sobre-texto">
+                  <h3>Um sonho que nasceu do amor pelos animais</h3>
+                  <p>
+                     A PetLar nasceu do desejo de transformar histórias
+                     de abandono em novos começos. Acolhemos cães e gatos
+                     que enfrentaram situações difíceis e acreditamos que
+                     todos merecem carinho, proteção e um lar seguro.
+                  </p>
+               </div>
+
+               <div class="sobre-imagem">
+                  <img src="assets/imagens/sobre-resgate.jpeg" alt="Animal acolhido recebendo carinho" loading="lazy">
+               </div>
+            </div>
+
+            <!-- Bloco 2: Nosso compromisso -->
+            <div class="sobre-compromisso">
+               <h3>Nosso compromisso com cada vida</h3>
+
+               <div class="sobre-cards">
+                  <article class="sobre-card">
+                     <i class="fa-solid fa-hand-holding-heart" aria-hidden="true"></i>
+                     <h4>Acolhimento</h4>
+                     <p>Proteção, alimentação e carinho para recomeçar.</p>
+                  </article>
+
+                  <article class="sobre-card">
+                     <i class="fa-solid fa-shield-heart" aria-hidden="true"></i>
+                     <h4>Saúde e cuidado</h4>
+                     <p>
+                        Atenção veterinária, vacinação e castração,
+                        conforme as necessidades de cada animal.
+                     </p>
+                  </article>
+
+                  <article class="sobre-card">
+                     <i class="fa-solid fa-house-circle-check" aria-hidden="true"></i>
+                     <h4>Adoção responsável</h4>
+                     <p>
+                        Buscamos famílias comprometidas em oferecer
+                        segurança e amor por toda a vida.
+                     </p>
+                  </article>
+               </div>
+            </div>
+
+            <!-- Bloco 3: Amor que transforma -->
+            <div class="sobre-amor">
+               <div class="sobre-texto">
+                  <h3>Adotar é ganhar um amigo para a vida</h3>
+                  <p>
+                     Mais do que oferecer um lar, adotar é abrir espaço
+                     para uma amizade especial. Cada patinha traz sua
+                     própria maneira de demonstrar carinho, companhia
+                     e alegria.
+                  </p>
+
+                  <a href="#adocao" class="sobre-botao">
+                     Conheça nossos amiguinhos
+                     <i class="fa-solid fa-paw" aria-hidden="true"></i>
+                  </a>
+               </div>
+
+               <div class="sobre-imagem">
+                  <img src="assets/imagens/sobre-amor.jpeg" alt="Pessoa compartilhando um momento de carinho com um pet"
+                     loading="lazy">
+               </div>
+            </div>
+
+         </div>
       </section>
+
 
 
       <section id="adocao">
@@ -206,7 +287,11 @@
       </div>
    </footer>
 
-
+   <!-- Botão voltar ao topo -->
+   <button id="voltar-topo" class="voltar-topo" type="button" aria-label="Voltar ao início da página"
+      title="Voltar ao topo">
+      <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+   </button>
 </body>
 
 </html>

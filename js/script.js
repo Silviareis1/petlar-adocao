@@ -52,3 +52,27 @@ async function buscarCuriosidade() {
 
 botaoCuriosidade.addEventListener("click", buscarCuriosidade);
 
+// ===== BOTÃO VOLTAR AO TOPO =====
+
+const botaoTopo = document.querySelector("#voltar-topo");
+
+if (botaoTopo) {
+   function verificarRolagem() {
+      if (window.scrollY > 300) {
+         botaoTopo.classList.add("visivel");
+      } else {
+         botaoTopo.classList.remove("visivel");
+      }
+   }
+
+   window.addEventListener("scroll", verificarRolagem, { passive: true });
+
+   botaoTopo.addEventListener("click", () => {
+      window.scrollTo({
+         top: 0,
+         behavior: "smooth"
+      });
+   });
+
+   verificarRolagem();
+}

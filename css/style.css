@@ -436,6 +436,150 @@ button:focus-visible {
    }
 }
 
+/* ===== SOBRE ===== */
+
+.sobre {
+   background-color: var(--menta);
+   padding: 80px 8%;
+}
+
+.sobre-container {
+   max-width: 1200px;
+   margin: 0 auto;
+}
+
+.sobre-cabecalho {
+   margin-bottom: 40px;
+}
+
+.sobre-etiqueta {
+   display: inline-block;
+   font-size: 0.95rem;
+   font-weight: 600;
+   color: var(--grafite);
+   margin-bottom: 12px;
+}
+
+.sobre-cabecalho h2 {
+   font-size: 2.2rem;
+   color: var(--lavanda);
+   margin-bottom: 12px;
+}
+
+.sobre-introducao {
+   font-size: 1.1rem;
+   color: var(--grafite);
+   max-width: 600px;
+}
+
+/* blocos com texto + imagem */
+.sobre-historia,
+.sobre-amor {
+   display: grid;
+   grid-template-columns: 1.1fr 0.9fr;
+   align-items: start;
+   gap: 40px;
+   margin-bottom: 60px;
+}
+
+.sobre-texto h3 {
+   font-size: 1.6rem;
+   color: var(--grafite);
+   margin-bottom: 16px;
+   
+}
+
+.sobre-texto p {
+   font-size: 1rem;
+   line-height: 1.8;
+   color: var(--grafite);
+}
+
+/* imagens */
+.sobre-imagem img {
+   width: 100%;
+   max-width: 320px;
+   height: auto;
+   display: block;
+   margin: 0 auto;
+   border-radius: 24px;
+   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.10);
+   object-fit: cover;
+}
+
+/* compromisso */
+.sobre-compromisso {
+   margin-bottom: 60px;
+}
+
+.sobre-compromisso h3 {
+   font-size: 1.7rem;
+   color: var(--grafite);
+   text-align: center;
+   margin-bottom: 30px;
+}
+
+.sobre-cards {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   gap: 24px;
+}
+
+.sobre-card {
+   background-color: var(--creme);
+   padding: 28px 22px;
+   border-radius: 20px;
+   text-align: center;
+   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.sobre-card i {
+   font-size: 1.8rem;
+   color: var(--lavanda);
+   margin-bottom: 14px;
+}
+
+.sobre-card h4 {
+   font-size: 1.2rem;
+   color: var(--grafite);
+   margin-bottom: 10px;
+}
+
+.sobre-card p {
+   font-size: 0.95rem;
+   color: var(--grafite);
+   line-height: 1.6;
+}
+
+/* botão do bloco amor */
+.sobre-botao {
+   display: inline-flex;
+   align-items: center;
+   gap: 8px;
+   margin-top: 22px;
+   padding: 14px 24px;
+   background-color: var(--lavanda);
+   color: var(--branco);
+   text-decoration: none;
+   border-radius: 999px;
+   font-weight: 600;
+   transition: 0.3s ease;
+}
+
+.sobre-botao:hover {
+   transform: translateY(-2px);
+   opacity: 0.92;
+}
+
+/* Alterna a posição no bloco Amor que transforma */
+.sobre-amor .sobre-imagem {
+   order: 1;
+}
+
+.sobre-amor .sobre-texto {
+   order: 2;
+}
+
 /* RESPONSIVIDADE */
 
 @media (max-width: 600px) {
@@ -589,41 +733,168 @@ a.icone-social:hover {
 
 /* Desktop: exibir textos e esconder ícones */
 header nav a i {
-  display: none;
+   display: none;
 }
 
 /* Tablet e celular: exibir ícones */
 @media (max-width: 768px) {
-  header {
-    flex-direction: row;
-    justify-content: space-between;
-    text-align: left;
-    padding: 16px 5%;
-  }
+   header {
+      flex-direction: row;
+      justify-content: space-between;
+      text-align: left;
+      padding: 16px 5%;
+   }
 
-  header nav {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    flex-wrap: nowrap;
-    gap: 12px;
-  }
+   header nav {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      flex-wrap: nowrap;
+      gap: 12px;
+   }
 
-  header nav a {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 36px;
-    min-height: 44px;
-    font-size: 1.25rem;
-    color: var(--lavanda);
-  }
+   header nav a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 36px;
+      min-height: 44px;
+      font-size: 1.25rem;
+      color: var(--lavanda);
+   }
 
-  header nav a i {
-    display: inline-block;
-  }
+   header nav a i {
+      display: inline-block;
+   }
 
-  header nav a span {
-    display: none;
+   header nav a span {
+      display: none;
+   }
+}
+
+/* ===== PETLAR 2.0: SOBRE NO CELULAR ===== */
+
+@media (max-width: 768px) {
+
+   .sobre {
+      padding: 56px 6%;
+   }
+
+   .sobre-historia,
+   .sobre-amor {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      margin-bottom: 48px;
+   }
+
+   .sobre-historia .sobre-texto,
+   .sobre-amor .sobre-texto {
+      order: 1;
+      width: 100%;
+      text-align: left;
+   }
+
+   .sobre-historia .sobre-imagem,
+   .sobre-amor .sobre-imagem {
+      order: 2;
+      width: 100%;
+   }
+
+   .sobre-imagem img {
+      width: 100%;
+      max-width: 320px;
+      height: auto;
+      margin: 0 auto;
+      border-radius: 18px;
+   }
+
+   .sobre-cards {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+   }
+
+   .sobre-card {
+      padding: 24px;
+   }
+
+   .sobre-texto h3 {
+      font-size: 1.4rem;
+      line-height: 1.35;
+   }
+
+   .sobre-texto p {
+      font-size: 1rem;
+      line-height: 1.7;
+   }
+
+   .sobre-botao {
+      max-width: 100%;
+      text-align: center;
+   }
+}
+
+/* ===== AJUSTE DO ESPAÇAMENTO DA SEÇÃO SOBRE ===== */
+
+.sobre {
+  padding-top: 48px;
+  padding-bottom: 64px;
+}
+
+.sobre-cabecalho {
+  margin-bottom: 28px;
+}
+
+@media (max-width: 768px) {
+  .sobre {
+    padding-top: 36px;
+    padding-bottom: 48px;
   }
+}
+
+/* ===== BOTÃO VOLTAR AO TOPO ===== */
+
+.voltar-topo {
+   position: fixed;
+   bottom: 24px;
+   right: 24px;
+   width: 48px;
+   height: 48px;
+   border: none;
+   border-radius: 50%;
+   background: var(--lavanda);
+   color: var(--branco);
+   font-size: 1.2rem;
+   cursor: pointer;
+   z-index: 999;
+
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   opacity: 0;
+   visibility: hidden;
+   transform: translateY(12px);
+   transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s;
+   box-shadow: 0 5px 16px rgba(0, 0, 0, 0.2);
+}
+
+.voltar-topo.visivel {
+   opacity: 1;
+   visibility: visible;
+   transform: translateY(0);
+}
+
+.voltar-topo:hover {
+   background: var(--grafite);
+}
+
+@media (max-width: 768px) {
+   .voltar-topo {
+      bottom: 18px;
+      right: 18px;
+      width: 44px;
+      height: 44px;
+   }
 }
